@@ -5,25 +5,42 @@ const coin = {
           function randomNumber(){
         return  Math.floor(Math.random()*2)
       }
-      this.state = randomNumber()
+     return this.state = randomNumber()
       
   },
 
   toString: function () {
+      this.flip()
       if(this.state === 0){
           return "Heads"
+         
       }
-      else {
+      if(this.state === 1 ) {
           return "Tails"
       }
   },
 
   toHTML: function () {
     const image = document.createElement("img");
-    // Colocar uma imagem correspondente a essa valor.
-    // image.src = "./CAMINHO/IMAGEM.JPEG"
-    // image.alt = "Heads/Tails"
-    return image;
+    const moeda = document.getElementById('moeda')
+    
+
+
+    if(coin.toString() === "Heads"){
+        image.src = "./assets/cara.png"
+        image.alt = "Heads"
+        image.width = 180
+
+    }
+    if(coin.toString() === "Tails"){
+        image.src = "./assets/coroa.png"
+        image.alt = "Tails"
+        image.width = 200
+
+
+    }
+    return moeda.appendChild(image)
+    ;
   },
   
 };
