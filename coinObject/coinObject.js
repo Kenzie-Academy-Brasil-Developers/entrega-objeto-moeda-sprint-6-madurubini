@@ -28,13 +28,13 @@ const coin = {
     if(coin.toString() === "Heads"){
         image.src = "./assets/cara.png"
         image.alt = "Heads"
-        image.width = 180
+        image.width = 110
 
     }
     if(coin.toString() === "Tails"){
         image.src = "./assets/coroa.png"
         image.alt = "Tails"
-        image.width = 200
+        image.width = 120
 
 
     }
@@ -70,3 +70,5 @@ function display20Flips() {
     return results
   }
 
+  display20Flips()
+  display20Images()
